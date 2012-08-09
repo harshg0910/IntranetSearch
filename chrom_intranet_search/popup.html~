@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+#searchwrapper {
+width:310px; /*follow your image's size*/
+height:40px;/*follow your image's size*/
+background-image:url(THE_SEARCH_BOX_IMAGE);
+background-repeat:no-repeat; /*important*/
+padding:0px;
+margin:0px;
+position:relative; /*important*/
+font-color:#FFCC99;
+}
+ 
+#searchwrapper form { display:inline ; }
+ 
+.searchbox {
+border:0px; /*important*/
+background-color:transparent; /*important*/
+position:absolute; /*important*/
+top:6px;
+left:9px;
+width:256px;
+height:28px;
+color:#FFCC99;
+}
+</style>
+
+<script type="text/javascript" src="popup.js"></script>
+
+</head>
+
+<body onload="document.form.query.focus()";>
+
+<div id="searchwrapper">
+	<form name="form" id="search_form" action="popup.html" method="POST">
+	<input type="text" class="searchbox" name="query" value=""/>
+	<input type="hidden" name="search" value="1">
+	
+	<!-- From here the popup.js will take the data, create the query url and redirect to it-->
+	<input type="image" src="search.png" id="search" value=""/>
+	</form>
+</div>
+
+</body>
+</html>
